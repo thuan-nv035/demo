@@ -1,9 +1,16 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import AddPosts from "./pages/Posts/AddPosts";
 function App() {
   return (
     <div className="App">
-      <Home />
+      <BrowserRouter>
+      <Home/>
+      <Routes>
+        <Route to = "/addposts" element = {<AddPosts/>} />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
