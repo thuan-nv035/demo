@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { db } from "../firebase";
 
-const Content = () => {
+const Category = () => {
   const [categories, setCategories] = useState([]);
   let unsub = null;
   useEffect(() => {
@@ -21,14 +21,21 @@ const Content = () => {
       });
     })();
   }, []);
+
+  const handleClick = async (category) => {
+    
+  }
+
   return (
     <div>
       <ul>
-      <h1>Danh muc tin tuc</h1>
-        {categories?.map((item, index) => { 
+        <h1>Danh muc tin tuc</h1>
+        {categories?.map((item, index) => {
           return (
-            <div className = "cursor-pointer" key={index}>
-              <h1>{item.category}</h1>
+            <div className="cursor-pointer" key={index}>
+          
+                <h1>{item.category}</h1>
+              
             </div>
           );
         })}
@@ -37,4 +44,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Category;
