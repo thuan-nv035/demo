@@ -1,9 +1,12 @@
 import React from "react";
+import Content from "../components/Content";
+import Header from "../components/Header";
 
 function Home(props) {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline bg-blue-400">Hello world!</h1>
+      <Header />
+      <Content />
     </div>
   );
 }

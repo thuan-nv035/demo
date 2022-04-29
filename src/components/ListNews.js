@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Footer(props) {
+const ListNews = () => {
     return (
         <div>
             
         </div>
     );
-}
+};
 
-export default Footer;
+export default ListNews;
